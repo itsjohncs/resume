@@ -13,6 +13,13 @@ body {
 	color: #161616;
 
 	margin: 70px;
+
+	line-height: 1.6;
+}
+
+#resume-page {
+	width: 690px;
+	margin: 0 auto;
 }
 
 a, a:visited {
@@ -66,100 +73,136 @@ article.job-position > header > aside {
 article.job-position > summary {
 	clear: both;
 }
+
+article.job-position span.job-title {
+	color: #AAA;
+}
+
+article.job-position ul.job-tech {
+	margin: -8px 0 8px 0;
+	font-size: 12px;
+	padding: 0;
+	display: block;
+	text-align: left;
+}
+
+article.job-position ul.job-tech > li {
+	display: inline-block;
+
+	padding: 0px 5px;
+	background: #F1F1F1;
+}
 </style>
 </head>
 <body>
-<header id="heading">
-	<h1>John Sullivan</h1>
-	<div class="contact-info">
-		<a href="mailto:johnsullivan.pem@gmail.com">johnsullivan.pem@gmail.com</a> • Portfolio at <a href="http://johncs.com">johncs.com</a>
-	</div>
-</header>
+<div id="resume-page">
+	<header id="heading">
+		<h1>John Sullivan</h1>
+		<div class="contact-info">
+			<a href="mailto:johnsullivan.pem@gmail.com">johnsullivan.pem@gmail.com</a> • Portfolio at <a href="http://johnsullivan.name">johnsullivan.name</a>
+		</div>
+	</header>
 
-<section>
-	<h2>Work History</h2>
-	<article class="job-position">
-		<header>
-			<h3>Khan Academy: Software Developer</h3>
-			<aside><time>October 2014</time> to <time>Present</time></aside>
-			<div style="clear: both"></div>
-		</header>
-		<summary>
-			I work on making Khan Academy's search as awesome as possible, as well as the rest of the site as part of the awesome Core UX team!
-		</summary>
-	</article>
-	<article class="job-position">
-		<header>
-			<h3>Mozilla: Software Developer Intern</h3>
-			<aside><time>Summer 2014</time></aside>
-			<div style="clear: both"></div>
-		</header>
-		<summary>
-			I improved on the DNS cache used by Firefox, Firefox OS, and other mozilla products. It now uses TTL information when available. This involved writing platform specific code for most of Gecko's targeted platforms. I also worked on allowing a mesh network to be established through Firefox OS phones.
-		</summary>
-	</article>
-	<article class="job-position">
-		<header>
-			<h3>Khan Academy: Software Developer Intern</h3>
-			<aside><time>Spring 2014</time></aside>
-			<div style="clear: both"></div>
-		</header>
-		<summary>
-			I improved Khan Academy's search page by radically updating its UI; moving our backing engine from self-hosted Solr to a more easily-scalable CloudSearch; implementing a search-as-you-type feature (which was possible due to our stronger engine); reducing the time it takes to update our search index from hours to a couple minutes; and tons more.
-		</summary>
-	</article>
-	<article class="job-position">
-		<header>
-			<h3>JetHead Development Inc: Software Developer Intern</h3>
-			<aside><time>Summers of 2012 and 2013</time></aside>
-			<div style="clear: both"></div>
-		</header>
-		<summary>
-			In my first internship, I was solely responsible for designing and implementing a new closed captioning system for their set top boxes (CEA-608). My code proved to be very stable and few bug reports were filed against our closed caption system during my year-long-absence.
-			During my second internship, as the need to support other caption formats emerged (we were entering markets in other countries), I created a stable platform that the rest of our developers could build atop while helping with the effort to support CEA-708.
-		</summary>
-	</article>
-	<article class="job-position">
-		<header>
-			<h3>UC Riverside: Supplemental Instruction Leader</h3>
-			<aside><time>March 2011 to June 2014</time></aside>
-			<div style="clear: both"></div>
-		</header>
-		<summary>
-			I led multiple, twice-weekly classes that aimed to assist freshmen in their understanding of Computer Science. During my last year, I became a Mentor and worked to assist my fellow SI Leaders.
-		</summary>
-	</article>
-</section>
+	<section>
+		<h2>Work History</h2>
+		<article class="job-position">
+			<header>
+				<h3><a href="https://www.khanacademy.com">Khan Academy</a> <span class="job-title">Software Engineer</span></h3>
+				<aside><time>October 2014</time> to <time>Present</time></aside>
+				<div style="clear: both"></div>
+			</header>
+			<ul class="job-tech">
+				<li>Python</li>
+				<li>Google App Engine</li>
+				<li>Javascript</li>
+				<li>Amazon CloudSearch</li>
+			</ul>
+			<summary>
+				I work on making Khan Academy's search as awesome as possible, as well as the rest of the site as part of the awesome Core UX team!
+			</summary>
+		</article>
+		<article class="job-position">
+			<header>
+				<h3><a href="https://www.mozilla.org">Mozilla</a> <span class="job-title">Software Engineer Intern</span></h3>
+				<aside><time>Summer 2014</time></aside>
+				<div style="clear: both"></div>
+			</header>
+			<ul class="job-tech">
+				<li>C++</li>
+				<li>Networking</li>
+				<li>Win32</li>
+				<li>Bionic</li>
+			</ul>
+			<summary>
+				I improved on the DNS cache used by Firefox, Firefox OS, and other mozilla products. It now uses TTL information when available. This involved writing platform specific code for most of Gecko's targeted platforms. I also worked on allowing a mesh network to be established through Firefox OS phones.
+			</summary>
+		</article>
+		<article class="job-position">
+			<header>
+				<h3><a href="https://www.khanacademy.org">Khan Academy</a> <span class="job-title">Software Engineer Intern</span></h3>
+				<aside><time>Spring 2014</time></aside>
+				<div style="clear: both"></div>
+			</header>
+			<ul class="job-tech">
+				<li>Python</li>
+				<li>Google App Engine</li>
+				<li>Javascript</li>
+				<li>Amazon CloudSearch</li>
+			</ul>
+			<summary>
+				I improved Khan Academy's search page by radically updating its UI; moving our backing engine from self-hosted Solr to a more easily-scalable CloudSearch; implementing a search-as-you-type feature (which was possible due to our stronger engine); reducing the time it takes to update our search index from hours to a couple minutes; and tons more.
+			</summary>
+		</article>
+		<article class="job-position">
+			<header>
+				<h3><a href="http://www.jetheaddev.com">JetHead Development</a> <span class="job-title">Software Engineer Intern</span></h3>
+				<aside><time>Summers of 2012 and 2013</time></aside>
+				<div style="clear: both"></div>
+			</header>
+			<ul class="job-tech">
+				<li>C++</li>
+				<li>CEA-608</li>
+				<li>CEA-708</li>
+			</ul>
+			<summary>
+				In my first internship, I was solely responsible for designing and implementing a new closed captioning system for their set top boxes (CEA-608). My code proved to be very stable and few bug reports were filed against our closed caption system during my year-long-absence.
+				During my second internship, as the need to support other caption formats emerged (we were entering markets in other countries), I created a stable platform that the rest of our developers could build atop while helping with the effort to support CEA-708.
+			</summary>
+		</article>
+		<article class="job-position">
+			<header>
+				<h3><a href="http://www.ucr.edu">UC Riverside</a> <span class="job-title">Supplemental Instructor</span></h3>
+				<aside><time>March 2011 to June 2014</time></aside>
+				<div style="clear: both"></div>
+			</header>
+			<summary>
+				I led multiple, twice-weekly classes that aimed to assist freshmen in their understanding of Computer Science. During my last year, I became a Mentor and worked to assist my fellow SI Leaders.
+			</summary>
+		</article>
+	</section>
 
-<section>
-	<h2>Projects</h2>
-	<summary>
-		I've created tons of awesome software outside of traditional employment. Check out the most awesome on my portfolio at johncs.com!
-	</summary>
-</section>
-
-<section>
-	<h2>Education</h2>
-	<article>
-		<h3>Self-Taught</h3>
+	<section>
+		<h2>Projects</h2>
 		<summary>
-			I began programming in 3rd grade and I have been actively exploring software engineering ever since. See johnsullivan.name/about.htm#backstory for the full story.
+			I've created tons of awesome software outside of traditional employment. Check out the most awesome ones in my portfolio at <a href="http://johnsullivan.name">johnsullivan.name</a>!
 		</summary>
-	</article>
-	<article>
-		<h3>University of California, Riverside</h3>
-		<summary>
-			I stopped attending during my 4th-year after accepting Khan Academy's offer to return as a full-timer. I was in Junior standing, majoring in Computer Science, and had a 3.285 cumulative GPA.
-		</summary>
-	</article>
-</section>
+	</section>
 
-<section>
-	<h2>Technologies</h2>
-	<summary>
-		Here are some technologies that I have had a strong history with and wish to work with in the future.
-	</summary>
-</section>
-
+	<section>
+		<h2>Education</h2>
+		<article>
+			<h3>Self-Taught</h3>
+			<summary>
+				I began programming in 3rd grade and I have been actively exploring software engineering ever since. See <a href="http://johnsullivan.name/about.html#backstory">johnsullivan.name/about.htm#backstory</a> for the full story.
+			</summary>
+		</article>
+		<article>
+			<h3><a href="http://www.ucr.edu">UC Riverside</a></h3>
+			<summary>
+				I stopped attending during after accepting Khan Academy's offer to join them full-time. I was in Junior standing, majoring in Computer Science, and had a 3.285 cumulative GPA when I left. I have no plans to return for my degree.
+			</summary>
+		</article>
+	</section>
+</div>
 </body>
 </html>
