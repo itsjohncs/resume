@@ -31,6 +31,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+abbr[title] {
+	border: none;
+}
+
 #heading {
 	text-align: center;
 }
@@ -38,6 +42,7 @@ a:hover {
 h1 {
 	font-size: 24px;
 	font-weight: 700;
+	font-variant: small-caps;
 }
 
 h2 {
@@ -70,8 +75,9 @@ article.job-position > header > aside {
 	float: right;
 }
 
-article.job-position > summary {
-	clear: both;
+article.job-position > summary > p {
+	margin-top: 0;
+	margin-bottom: 6px;
 }
 
 article.job-position span.job-title {
@@ -111,14 +117,8 @@ article.job-position ul.job-tech > li {
 				<aside><time>October 2014</time> to <time>Present</time></aside>
 				<div style="clear: both"></div>
 			</header>
-			<ul class="job-tech">
-				<li>Python</li>
-				<li>Google App Engine</li>
-				<li>Javascript</li>
-				<li>Amazon CloudSearch</li>
-			</ul>
 			<summary>
-				I work on making Khan Academy's search as awesome as possible, as well as the rest of the site as part of the awesome Core UX team!
+				I am excited to start! I plan to continue my work on <a href="https://www.khanacademy.org/search">the search page</a> as well as branching out into other areas of our awesome offering!
 			</summary>
 		</article>
 		<article class="job-position">
@@ -128,13 +128,13 @@ article.job-position ul.job-tech > li {
 				<div style="clear: both"></div>
 			</header>
 			<ul class="job-tech">
-				<li>C++</li>
+				<li>C++11</li>
 				<li>Networking</li>
 				<li>Win32</li>
 				<li>Bionic</li>
 			</ul>
 			<summary>
-				I improved on the DNS cache used by Firefox, Firefox OS, and other mozilla products. It now uses TTL information when available. This involved writing platform specific code for most of Gecko's targeted platforms. I also worked on allowing a mesh network to be established through Firefox OS phones.
+				I improved on the DNS cache used by most of Mozilla's products to use TTL information when available. This involved writing platform specific code for many of our supported platforms. I also worked on adding support for mesh networking among Firefox OS phones.
 			</summary>
 		</article>
 		<article class="job-position">
@@ -145,12 +145,12 @@ article.job-position ul.job-tech > li {
 			</header>
 			<ul class="job-tech">
 				<li>Python</li>
-				<li>Google App Engine</li>
+				<li><abbr title="Google App Engine">GAE</abbr></li>
 				<li>Javascript</li>
 				<li>Amazon CloudSearch</li>
 			</ul>
 			<summary>
-				I improved Khan Academy's search page by radically updating its UI; moving our backing engine from self-hosted Solr to a more easily-scalable CloudSearch; implementing a search-as-you-type feature (which was possible due to our stronger engine); reducing the time it takes to update our search index from hours to a couple minutes; and tons more.
+				I improved <a href="https://www.khanacademy.org/search">the search page</a> by radically updating its UI; moving the backing engine from self-hosted Solr to the easily scalable CloudSearch; implementing a search-as-you-type feature; reducing the time it takes to update our search index from hours to a couple minutes; and tons more.
 			</summary>
 		</article>
 		<article class="job-position">
@@ -165,8 +165,12 @@ article.job-position ul.job-tech > li {
 				<li>CEA-708</li>
 			</ul>
 			<summary>
-				In my first internship, I was solely responsible for designing and implementing a new closed captioning system for their set top boxes (CEA-608). My code proved to be very stable and few bug reports were filed against our closed caption system during my year-long-absence.
-				During my second internship, as the need to support other caption formats emerged (we were entering markets in other countries), I created a stable platform that the rest of our developers could build atop while helping with the effort to support CEA-708.
+				<p>
+					I designed and implemented a new closed captioning implementation of CEA-608 for their set top boxes. My code proved to be very stable and few bug reports were filed against the system during my year-long absence between internships.
+				</p>
+				<p>
+					During my second internship, as we prepared to enter new markets in other countries, I expanded on my work and created a stable platform that the rest of our developers could build atop to support other closed captioning systems. I also helped with the effort to support CEA-708.
+				</p>
 			</summary>
 		</article>
 		<article class="job-position">
@@ -175,8 +179,26 @@ article.job-position ul.job-tech > li {
 				<aside><time>March 2011 to June 2014</time></aside>
 				<div style="clear: both"></div>
 			</header>
+			<ul class="job-tech">
+				<li>C++</li>
+			</ul>
 			<summary>
 				I led multiple, twice-weekly classes that aimed to assist freshmen in their understanding of Computer Science. During my last year, I became a Mentor and worked to assist my fellow SI Leaders.
+			</summary>
+		</article>
+		<article class="job-position">
+			<header>
+				<h3>Freelancer</h3>
+				<aside><time>Early 2007 to Early 2011</time></aside>
+				<div style="clear: both"></div>
+			</header>
+			<ul class="job-tech">
+				<li>Visual Basic 6</li>
+				<li>C#</li>
+				<li><abbr title="Windows Presentation Format">WPF</abbr></li>
+			</ul>
+			<summary>
+				I did several one-off contracts with various people and companies between my first year of highschool and my first year of college. These contracts included creating a GUI for a laser used to ensure quality of coffee beans, cloning the popular Microsoft Ribbon, setting up a database and GUI for a senior community home broker, creating software to index a professor's written works, and much more. Check out <a href="http://johnsullivan.name/about.html#backstory">my backstory</a> for more details.
 			</summary>
 		</article>
 	</section>
@@ -184,7 +206,7 @@ article.job-position ul.job-tech > li {
 	<section>
 		<h2>Projects</h2>
 		<summary>
-			I've created tons of awesome software outside of traditional employment. Check out the most awesome ones in my portfolio at <a href="http://johnsullivan.name">johnsullivan.name</a>!
+			I've a ton of awesome software outside of traditional employment. Check out the most awesome ones in <a href="http://johnsullivan.name">my portfolio</a>.
 		</summary>
 	</section>
 
@@ -193,7 +215,7 @@ article.job-position ul.job-tech > li {
 		<article>
 			<h3>Self-Taught</h3>
 			<summary>
-				I began programming in 3rd grade and I have been actively exploring software engineering ever since. See <a href="http://johnsullivan.name/about.html#backstory">johnsullivan.name/about.htm#backstory</a> for the full story.
+				I began programming in 3rd grade and I have been actively exploring software engineering ever since. See <a href="http://johnsullivan.name/about.html#backstory">my backstory</a> for more details.
 			</summary>
 		</article>
 		<article>
