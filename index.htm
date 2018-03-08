@@ -121,7 +121,7 @@
 		padding: 0;
 		display: block;
 		text-align: left;
-		margin-top: 0px;
+		margin: 0;
 	}
 
 	.job-position ul.job-tech > li {
@@ -170,6 +170,16 @@
 		<h2>Work History</h2>
 		<article class="job-position">
 			<header>
+				<h3><a href="http://johncs.com">Self-Employed</a></h3>
+				<span class="time-period"><time>March 2018</time> to <time>Present</time></span>
+				<div style="clear: both"></div>
+			</header>
+			<summary>
+				I've started on a new endeavor. Check out <a href="http://johncs.com">johncs.com</a> for info.
+			</summary>
+		</article>
+		<article class="job-position">
+			<header>
 				<h3><a href="https://www.khanacademy.org">Khan Academy</a> <span class="job-title">Senior Software Engineer</span></h3>
 				<span class="time-period"><time>November 2016</time> to <time>February 2018</time></span>
 				<div style="clear: both"></div>
@@ -187,7 +197,15 @@
 				</ul>
 			</header>
 			<summary>
-				I had a central role in the creation of several Khan Academy's products: <a href="https://www.khanacademy.org/sat">Official SAT® Practice</a>; the <a href="http://engineering.khanacademy.org">KA engineering blog</a>; several internationalization tools and systems; the end-to-end test system that helps keep KA from falling over; and much more (including <a href="http://engineering.khanacademy.org/posts/autonomous-dumbledore.htm">"The Autonomous Dumbledore"</a>). I also worked on hundreds of smaller disconnected tasks that involved making changes throughout the entire codebase.
+				<p>
+					I led a successful multi-year, many-person engineering effort to ensure Khan Academy's success internationally. Before that I held a pivotal role in the creation and evolution of <a href="https://www.khanacademy.org/sat">Official SAT® Practice</a>, influencing the direction of the product and building huge swaths of its back- and front-end code, as well as being the face of Khan Academy's engineering team as we collaborated with <a href="https://www.collegeboard.org/">The College Board's</a> engineers.
+				</p>
+				<p>
+					I created the <a href="http://engineering.khanacademy.org">engineering blog</a> to share our knowledge internally and externally, and then followed through and inspired (slash badgered) people to make regular posts for years. I created Khan Academy's first useable and successful end-to-end testing system as a side project (a system that is constantly pretending to be a real user and alerts us when parts of the site break), and helped drive contract negotiations with <a href="https://saucelabs.com/">Sauce Labs</a> so we'd have a powerful infrastructure to run the system. I helped evolve how we evaluate new hires, and pushed Khan Academy to make hiring effective and inclusive.
+				</p>
+				<p>
+					I spent over three years at Khan Academy, and have led or helped with too many projects and efforts for me to list here. Talk to me if you want more stories, and keep an eye out for learned lessons appearing on <a href="http://blog.johncs.com">my blog</a>.
+				</p>
 			</summary>
 		</article>
 		<article class="job-position">
@@ -203,7 +221,40 @@
 				</ul>
 			</header>
 			<summary>
-				I improved on the DNS cache used by most of Mozilla's products to use TTL information when available. This involved writing platform specific code for many of their supported platforms. I also worked on adding support for mesh networking among Firefox OS phones.
+				<p>
+					I worked on the guts of Mozilla's networking code. If you're viewing this resume on Firefox, you're running my code. (Fun fact: that code is ancient enough that some of it is the same code that was running in the Netscape browser!)
+				</p>
+				<p>
+					Specifically I worked on improving how Firefox and other Mozilla products perform DNS lookups. I ended up having to write platform specific code for many of their supported platforms. Towards the end of my internship I also helped with research on how mesh networking could be implemented in Firefox OS phones (a technology that allows internet access in areas with minimal infrastructure).
+				</p>
+			</summary>
+		</article>
+		<article class="job-position">
+			<header>
+				<h3><a href="https://github.com/galah-group/galah">Galah</a> <span class="job-title">Cofounder</span></h3>
+				<span class="time-period"><time>May 2012</time> to <time>Late 2014</time></span>
+				<div style="clear: both"></div>
+				<ul class="job-tech">
+					<li>Python</li>
+					<li>uWSGI</li>
+					<li>Nginx</li>
+					<li>MongoDB</li>
+					<li>ZeroMQ</li>
+					<li>OpenVZ</li>
+					<li>Flask</li>
+					<li>Vagrant</li>
+				</ul>
+			</header>
+			<summary>
+				<p>
+					I founded this company after an instructor at UC Riverside said they wished they had an automated grading system for computer programming assignments. I created Galah, enlisted a cofounder, and for a few years hundreds of students every quarter used Galah. Over 150,000 submissions were received and graded.
+				</p>
+				<p>
+					My cofounder and I created an ecosystem of products around Galah: ways for teachers to write Python code that can test their students C++ code, ways for system administrators and teachers to control Galah from the command line, and (with the help of a lawyer) <a href="https://github.com/galah-group/gg-gpl">a novel "commercial open-source" license</a>.
+				</p>
+				<p>
+					When Khan Academy offered to hire me full time after my internship, I coordinated with my cofounder and the instructors who relied on Galah and shut the company down.
+				</p>
 			</summary>
 		</article>
 		<article class="job-position">
@@ -222,7 +273,12 @@
 				</ul>
 			</header>
 			<summary>
-				I improved <a href="https://www.khanacademy.org/search">the search page</a> by radically updating its UI, moving the backing engine from self-hosted Solr to the easily scalable CloudSearch, implementing a search-as-you-type feature, reducing the time it takes to update our search index from hours to minutes, and tens of tiny tweaks.
+				<p>
+					I was told to "make search better" when I arrived as an intern, and I wasted no time. I interviewed Google engineers for inspiration, ran A/B tests, and collaborated with folks across the company.
+				</p>
+				<p>
+					I ended up improving Khan Academy's search functionality by radically updating its UI, including fancy search-as-you-type features and non-fancy "make it clear what each result is" features; moving the backing engine from a not-maintained Solr installation on some server to the more Khan Academy appropriate CloudSearch; reducing the time it takes to update our search index after the site is updated (which happens dozens of times daily) from many hours to minutes; and many tens of tiny tweaks (<a href="http://blog.johncs.com/posts/5-highlighting.htm">I blogged about one such tweak</a>).
+				</p>
 			</summary>
 		</article>
 		<article class="job-position">
@@ -239,10 +295,13 @@
 			</header>
 			<summary>
 				<p>
-					I designed and implemented a new closed captioning implementation of CEA-608 for their set top boxes. My code proved to be very stable and few bug reports were filed against the system during my year-long absence between internships.
+					They're a small company and I ended up independantly designing and implementing the closed captioning implementation for their suite of set top boxes.
 				</p>
 				<p>
-					During my second internship they were preparing to enter new markets in other countries including Mexico and China. To accommodate, I expanded on my work and created a stable platform that the rest of the team could build atop in order to support the new specifications. I also helped directly with the effort to support CEA-708.
+					JetHead writes software for DirecTV, and most DirecTV boxes you'll see in commercial spaces (bars, restaurants, etc) are running my captioning implementation. Lemme know if you see a bug 😅.
+				</p>
+				<p>
+					My code proved to be quite stable and few bug reports were filed against the system during my year-long absence between internships. When I came back for my second internship they were preparing to ship our commercial boxes to new markets in other countries including Mexico and China. That meant many new captioning formats to support, so to accommodate I expanded on my work and created a stable platform that allowed us to get several folks on the team building atop the platform concurrently. After getting that going I also helped with the specific efforts for Mexico.
 				</p>
 			</summary>
 		</article>
@@ -260,7 +319,7 @@
 				</ul>
 			</header>
 			<summary>
-				I led multiple twice-weekly classes that aimed to improve students' understanding of Computer Science. During my last year, I became a mentor (a manager-like role) and worked to teach and lead my fellows.
+				I led multiple twice-weekly classes that aimed to improve students' understanding of Computer Science. During my last year, I became a mentor (a manager-like role) and worked to teach, lead, and manage my fellow instructors.
 			</summary>
 		</article>
 		<article class="job-position">
@@ -277,35 +336,21 @@
 				</ul>
 			</header>
 			<summary>
-				I did several one-off contracts with various people and companies between my first year of high school and my first year of college. These contracts included creating a GUI for a laser that measured the darkness of coffee grounds, cloning the popular Microsoft Ribbon, setting up a database and GUI for a senior community home broker, creating a tool to index a professor's written works, and much more.
+				<p>
+					I did several one-off contracts with various people and companies between my first year of high school and my first year of college. These contracts included creating a GUI for a laser that measured the darkness of coffee grounds, cloning the popular Microsoft Ribbon, setting up a database and GUI for a senior community home broker, creating a tool to index a professor's written works, and much more.
+				</p>
+				<p>
+					During this time I almost always had an active contract. The coffee laser and senior community home broker's contracts were long-term and ended up lasting a year or more.
+				</p>
 			</summary>
 		</article>
 	</section>
 
 	<section>
-		<h2>Side Projects</h2>
+		<h2>Misc Independent Projects</h2>
 		<summary>
-			I've worked on many projects outside of work. Here is a selection of some of my favorites, but you can find more on my <a href="https://github.com/brownhead">GitHub profile</a> and <a href="http://johncs.com/mini-projects-index.htm">personal site</a>.
+			I've worked on many projects outside of work. Before I started working professionally, I made many hundreds of small projects instead of doing my homework. Here is a selection of some of my favorites, but you can find a few more on my <a href="https://github.com/brownhead">GitHub profile</a> and <a href="http://johncs.com/mini-projects-index.htm">personal site</a>. I'm always happy to talk about the projects I made before GitHub was around as well.
 		</summary>
-		<article class="job-position">
-			<header>
-				<h3><a href="https://github.com/galah-group/galah">Galah</a></h3>
-				<div style="clear: both"></div>
-				<ul class="job-tech">
-					<li>Python</li>
-					<li>uWSGI</li>
-					<li>Nginx</li>
-					<li>MongoDB</li>
-					<li>ZeroMQ</li>
-					<li>OpenVZ</li>
-					<li>Flask</li>
-					<li>Vagrant</li>
-				</ul>
-			</header>
-			<summary>
-				My first epic foray into web development. It's an automated grading system geared towards processing computer programming assignments. For a few years, hundreds of students every quarter used Galah. Over 150,000 submissions were made to Galah, each one tested by placing its code into a clean virtual machine with the instructor's test harness.
-			</summary>
-		</article>
 		<article class="job-position">
 			<header>
 				<h3><a href="http://johncs.xyz">johncs.xyz</a> and <a href="https://github.com/brownhead/particles">Particles</a></h3>
@@ -367,7 +412,12 @@
 				<div style="clear: both"></div>
 			</header>
 			<summary>
-				I began programming in 3<sup>rd</sup> grade and I have been actively exploring software engineering ever since.
+				<p>
+					I began programming in 3<sup>rd</sup> grade. I continuously wrote software once I got started, and created many hundreds of variously sized projects after school and during summers, often coding long into the night. 
+				</p>
+				<p>
+					I don't write code in my spare time nearly as often as I used to before I left college, but I'm still actively working on becoming a better software engineer, and I'll never stop learning.
+				</p>
 			</summary>
 		</article>
 		<article class="job-position">
