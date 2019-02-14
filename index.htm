@@ -132,6 +132,16 @@
 		margin-top: 3px;
 	}
 
+	.job-position > summary > ul {
+		padding-left: 0;
+		list-style: square;
+		color: #777;
+	}
+
+	.job-position > summary > ul > li > span {
+		color: #161616;
+	}
+
 	@media (max-width: 500px) {
 		.job-position > header > .time-period {
 			float: none;
@@ -170,13 +180,16 @@
 		<h2>Work History</h2>
 		<article class="job-position">
 			<header>
-				<h3><a href="https://johncs.com">Self-Employed</a></h3>
+				<h3><a href="https://shmeppy.com">Shmeppy</a> <span class="job-title">Founder</span></h3>
 				<span class="time-period"><time>March 2018</time> to <time>Present</time></span>
 				<div style="clear: both"></div>
+				<ul class="job-tech">
+					<li>Javascript</li>
+					<li>React.js</li>
+					<li>PostgreSQL</li>
+					<li>Node.js</li>
+				</ul>
 			</header>
-			<summary>
-				I've started on a new endeavor. Check out <a href="https://johncs.com">johncs.com</a> for info.
-			</summary>
 		</article>
 		<article class="job-position">
 			<header>
@@ -197,15 +210,15 @@
 				</ul>
 			</header>
 			<summary>
-				<p>
-					I led a successful multi-year, many-person engineering effort to ensure Khan Academy's success internationally. Before that I held a pivotal role in the creation and evolution of <a href="https://www.khanacademy.org/sat">Official SAT® Practice</a>, influencing the direction of the product and building huge swaths of its back- and front-end code, as well as being the face of Khan Academy's engineering team as we collaborated with <a href="https://www.collegeboard.org/">The College Board's</a> engineers.
-				</p>
-				<p>
-					I created the <a href="http://engineering.khanacademy.org">engineering blog</a> to share our knowledge internally and externally, and then followed through and inspired (slash badgered) people to make regular posts for years. I created Khan Academy's first useable and successful end-to-end testing system as a side project (a system that is constantly pretending to be a real user and alerts us when parts of the site break), and helped drive contract negotiations with <a href="https://saucelabs.com/">Sauce Labs</a> so we'd have a powerful infrastructure to run the system. I helped evolve how we evaluate new hires, and pushed Khan Academy to make hiring effective and inclusive.
-				</p>
-				<p>
-					I spent over three years at Khan Academy, and have led or helped with too many projects and efforts for me to list here. Talk to me if you want more stories, and keep an eye out for learned lessons appearing on <a href="https://blog.johncs.com">my blog</a>.
-				</p>
+				<ul>
+					<li><span>I drove to completion a successful multi-year, many-person engineering effort to give non-US users a location-specific and fully-translated experience.</span></li>
+					<li><span>I built most of the frontend for the launch of <a href="https://www.khanacademy.org/sat">Official SAT® Practice</a> and continued improving the full-stack of the product for nearly a year after the launch.</span></li>
+					<li><span>I represented Khan Academy's engineering team as we collaborated with <a href="https://www.collegeboard.org/">The College Board's</a> engineers to sync PSAT results to our servers.</span></li>
+					<li><span>As a side project I created and drove the success of the <a href="http://engineering.khanacademy.org">engineering blog</a>.</span></li>
+					<li><span>As a side project I created Khan Academy's first usable and successful end-to-end testing system and helped negotiate with <a href="https://saucelabs.com/">Sauce Labs</a> so we'd have free infrastructure to run on.</span></li>
+					<li><span>I helped evolve how we evaluate new hires and pushed Khan Academy to make hiring effective and inclusive.</span></li>
+					<li><span>I regularly held interactive presentations to share my knowledge of Khan Academy's critical infrastructure throughout the team.</span></li>
+				</ul>
 			</summary>
 		</article>
 		<article class="job-position">
@@ -221,12 +234,10 @@
 				</ul>
 			</header>
 			<summary>
-				<p>
-					I worked on the guts of Mozilla's networking code. If you're viewing this resume on Firefox, you're running my code. (Fun fact: that code is ancient enough that some of it is the same code that was running in the Netscape browser!)
-				</p>
-				<p>
-					Specifically I worked on improving how Firefox and other Mozilla products perform DNS lookups. I ended up having to write platform specific code for many of their supported platforms. Towards the end of my internship I also helped with research on how mesh networking could be implemented in Firefox OS phones (a technology that allows internet access in areas with minimal infrastructure).
-				</p>
+				<ul>
+					<li><span>I improved the quality of DNS lookups for all of Mozilla's products.</span></li>
+					<li><span>I helped with research on how mesh networking could be implemented in Firefox OS phones.</span></li>
+				</ul>
 			</summary>
 		</article>
 		<article class="job-position">
@@ -246,15 +257,14 @@
 				</ul>
 			</header>
 			<summary>
-				<p>
-					I founded this company after an instructor at UC Riverside said they wished they had an automated grading system for computer programming assignments. I created Galah, enlisted a cofounder, and for a few years hundreds of students every quarter used Galah. Over 150,000 submissions were received and graded.
-				</p>
-				<p>
-					My cofounder and I created an ecosystem of products around Galah: ways for teachers to write Python code that can test their students C++ code, ways for system administrators and teachers to control Galah from the command line, and (with the help of a lawyer) <a href="https://github.com/galah-group/gg-gpl">a novel "commercial open-source" license</a>.
-				</p>
-				<p>
-					When Khan Academy offered to hire me full time after my internship, I coordinated with my cofounder and the instructors who relied on Galah and shut the company down.
-				</p>
+				<ul>
+					<li><span>I created Galah: an automated grading system for programming assignments.</span></li>
+					<li><span>Over 150,000 submissions were received and graded at UC Riverside.</span></li>
+					<li><span>I worked closely with the UC Riverside system administrators to keep the system running for several years.</span></li>
+					<li><span>I enlisted a cofounder shortly before incorporating.</span></li>
+					<li><span>I negotiated an acquisition of the company and product but ultimately turned down the offer.</span></li>
+					<li><span>Collaboratively with an IP lawyer, I created <a href="https://github.com/galah-group/gg-gpl">a novel "commercial open-source" license</a> to support my business model.</span></li>
+				</ul>
 			</summary>
 		</article>
 		<article class="job-position">
@@ -273,12 +283,12 @@
 				</ul>
 			</header>
 			<summary>
-				<p>
-					I was told to "make search better" when I arrived as an intern, and I wasted no time. I interviewed Google engineers for inspiration, ran A/B tests, and collaborated with folks across the company.
-				</p>
-				<p>
-					I ended up improving Khan Academy's search functionality by radically updating its UI, including fancy search-as-you-type features and non-fancy "make it clear what each result is" features; moving the backing engine from a not-maintained Solr installation on some server to the more Khan Academy appropriate CloudSearch; reducing the time it takes to update our search index after the site is updated (which happens dozens of times daily) from many hours to minutes; and many tens of tiny tweaks (<a href="https://blog.johncs.com/posts/5-highlighting.htm">I blogged about one such tweak</a>).
-				</p>
+				<ul>
+					<li><span>I improved the ability for users to search and find content via search queries.</span></li>
+					<li><span>I ran A/B tests on each change to ensure they were effective.</span></li>
+					<li><span>I radically improved the infrastructure to bring the search indexing time down from many hours to mere minutes.</span></li>
+					<li><span>I implemented a search-as-you-type feature, <a href="https://blog.johncs.com/posts/5-highlighting.htm">snippets of content beneath results</a>, <a href="https://blog.johncs.com/posts/spellchecker.htm">spell checking</a>, and many other features</span></li>
+				</ul>
 			</summary>
 		</article>
 		<article class="job-position">
@@ -294,15 +304,13 @@
 				</ul>
 			</header>
 			<summary>
-				<p>
-					They're a small company and I ended up independantly designing and implementing the closed captioning implementation for their suite of set top boxes.
-				</p>
-				<p>
-					JetHead writes software for DirecTV, and most DirecTV boxes you'll see in commercial spaces (bars, restaurants, etc) are running my captioning implementation. Lemme know if you see a bug 😅.
-				</p>
-				<p>
-					My code proved to be quite stable and few bug reports were filed against the system during my year-long absence between internships. When I came back for my second internship they were preparing to ship our commercial boxes to new markets in other countries including Mexico and China. That meant many new captioning formats to support, so to accommodate I expanded on my work and created a stable platform that allowed us to get several folks on the team building atop the platform concurrently. After getting that going I also helped with the specific efforts for Mexico.
-				</p>
+				<ul>
+					<li><span>I independently designed and implemented the closed captioning system for their suite of set top boxes.</span></li>
+					<li><span>My captioning code is running on TVs in most bars and restaurants in (at least) the Bay Area.</span></li>
+					<li><span>My design proved stable and few bug reports were filed against my system during my year-long absence between internships.</span></li>
+					<li><span>I designed a robust error reporting and recovery system for the system.</span></li>
+					<li><span>During my second internship I expanded on my work to allow the company to expand their market into other countries.</span></li>
+				</ul>
 			</summary>
 		</article>
 		<article class="job-position">
@@ -319,7 +327,10 @@
 				</ul>
 			</header>
 			<summary>
-				I led multiple twice-weekly classes that aimed to improve students' understanding of Computer Science. During my last year, I became a mentor (a manager-like role) and worked to teach, lead, and manage my fellow instructors.
+				<ul>
+					<li><span>I led multiple twice-weekly classes that aimed to improve students' understanding of Computer Science.</span></li>
+					<li><span>I was promoted to a manger-like role (a mentor) and taught, led, and managed my fellow instructors.</span></li>
+				</ul>
 			</summary>
 		</article>
 		<article class="job-position">
@@ -336,33 +347,18 @@
 				</ul>
 			</header>
 			<summary>
-				<p>
-					I did several one-off contracts with various people and companies between my first year of high school and my first year of college. These contracts included creating a GUI for a laser that measured the darkness of coffee grounds, cloning the popular Microsoft Ribbon, setting up a database and GUI for a senior community home broker, creating a tool to index a professor's written works, and much more.
-				</p>
-				<p>
-					During this time I almost always had an active contract. The coffee laser and senior community home broker's contracts were long-term and ended up lasting a year or more.
-				</p>
+				<ul>
+					<li><span>Over two years I created the desktop suite for a system that allowed coffee roasting factories to analyze the quality of their beans</span>.</li>
+					<li><span>Over a month I ported the popular <a href="https://en.wikipedia.org/wiki/Ribbon_(computing)">Microsoft Ribbon</a> to Visual Basic 6</span>.</li>
+					<li><span>Over two years I set up a suite of tools for a senior community home broker to manage his clients and homes</span>.</li>
+					<li><span>Over a few days I created a tool to index a professor's written works.</span></li> 
+				</ul>
 			</summary>
 		</article>
 	</section>
 
 	<section>
-		<h2>Misc Independent Projects</h2>
-		<summary>
-			I've worked on many projects outside of work. Before I started working professionally, I made many hundreds of variously-sized projects instead of doing my homework. Here is a selection of some of my favorites, but you can find a few more on my <a href="https://github.com/itsjohncs">GitHub profile</a> and <a href="https://blog.johncs.com/mini-projects-index.htm">personal site</a>. I'm always happy to talk about the projects I made before GitHub was around as well.
-		</summary>
-		<article class="job-position">
-			<header>
-				<h3><a href="http://johncs.xyz">johncs.xyz</a> and <a href="https://github.com/itsjohncs/particles">Particles</a></h3>
-				<div style="clear: both"></div>
-				<ul class="job-tech">
-					<li>Javascript</li> <li>C</li> <li>SDL</li>
-				</ul>
-			</header>
-			<summary>
-				A fun toy based off of the <a href="http://www.chromeexperiments.com/detail/liquid-particles/">Liquid Particles Chrome Experiment</a>. I made the original C program in high school and then recreated it in Javascript in 2016.
-			</summary>
-		</article>
+		<h2>Selected Independent Projects</h2>
 		<article class="job-position">
 			<header>
 				<h3><a href="https://github.com/itsjohncs/superzippy">Superzippy</a></h3>
@@ -377,15 +373,14 @@
 		</article>
 		<article class="job-position">
 			<header>
-				<h3><a href="https://github.com/itsjohncs/agc4">Anti-Gravity Connect 4</a></h3>
+				<h3><a href="http://johncs.xyz">johncs.xyz</a> and <a href="https://github.com/itsjohncs/particles">Particles</a></h3>
 				<div style="clear: both"></div>
 				<ul class="job-tech">
-					<li>Flash</li>
-					<li>ActionScript</li>
+					<li>Javascript</li> <li>C</li> <li>SDL</li>
 				</ul>
 			</header>
 			<summary>
-				One of the few Flash games I've created, and the only one I'm willing to share with the world. AGC4 puts a big twist on the classic game of Connect 4.
+				A fun toy based off of the <a href="http://www.chromeexperiments.com/detail/liquid-particles/">Liquid Particles Chrome Experiment</a>. I made the original C program in high school and then recreated it in Javascript in 2016.
 			</summary>
 		</article>
 		<article class="job-position">
@@ -398,7 +393,7 @@
 				</ul>
 			</header>
 			<summary>
-				A Visual Basic 6 application that lets you hide any window on your Windows PC immediately, and temporarily, at the press of a hotkey. The first version was made towards the beginning of my middle school career when a user asked for a way to play Runescape without their parents knowing. I released the third version right before entering high school.
+				A Visual Basic 6 application that lets you hide any window on your Windows PC immediately, and temporarily, at the press of a hotkey. Created in middle school.
 			</summary>
 		</article>
 	</section>
@@ -413,10 +408,7 @@
 			</header>
 			<summary>
 				<p>
-					I began programming in 3<sup>rd</sup> grade. I continuously wrote software once I got started, and created many hundreds of variously sized projects after school and during summers, often coding long into the night. 
-				</p>
-				<p>
-					I don't write code in my spare time nearly as often as I used to before I left college, but I'm still actively working on becoming a better software engineer, and I'll never stop learning.
+					I began programming in 3<sup>rd</sup> grade. I continuously wrote software once I got started, and created many hundreds of variously sized projects after school and during summers, often coding long into the night.
 				</p>
 			</summary>
 		</article>
