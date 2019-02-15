@@ -142,7 +142,17 @@
 		color: #161616;
 	}
 
-	@media (max-width: 500px) {
+	@media (max-width: 780px) {
+		.job-position > summary > ul {
+			list-style-type: none;
+		}
+
+		.job-position > summary > ul > li {
+			margin-bottom: 7px;
+		}
+	}
+
+	@media (max-width: 550px) {
 		.job-position > header > .time-period {
 			float: none;
 			display: block;
@@ -161,14 +171,6 @@
 
 		body {
 			margin-bottom: 100px;
-		}
-
-		.job-position > summary > ul {
-			list-style-type: none;
-		}
-
-		.job-position > summary > ul > li {
-			margin-bottom: 7px;
 		}
 	}
 	</style>
