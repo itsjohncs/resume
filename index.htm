@@ -175,6 +175,33 @@
 	.print-contact-info {
 		display: none;
 	}
+
+	@media print {
+		body {
+			margin: 0 0.75in;
+			color-adjust: exact;
+		}
+
+		@page {
+			margin: 0.5in 0;
+		}
+
+		#resume-page {
+			max-width: none;
+		}
+
+		abbr {
+			text-decoration: none;
+		}
+
+		.job-position {
+			break-inside: avoid;
+		}
+
+		.no-breaking {
+			break-inside: avoid;
+		}
+	}
 	</style>
 </head>
 <body>
