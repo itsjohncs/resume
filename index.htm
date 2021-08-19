@@ -180,6 +180,7 @@
 		body {
 			margin: 0 0.75in;
 			color-adjust: exact;
+			-webkit-print-color-adjust: exact;
 		}
 
 		@page {
@@ -190,12 +191,20 @@
 			max-width: none;
 		}
 
+		a, a:visited {
+			color: #1E6895;
+		}
+
 		abbr {
 			text-decoration: none;
 		}
 
 		.job-position {
 			break-inside: avoid;
+		}
+
+		.job-position span.job-title {
+			color: #555;
 		}
 
 		.no-breaking {
