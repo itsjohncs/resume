@@ -71,11 +71,6 @@
         margin-top: -4px;
       }
 
-      h2 {
-        font-size: 14px;
-        font-weight: 600;
-      }
-
       .job-position {
         margin-bottom: 30px;
       }
@@ -86,14 +81,19 @@
       }
 
       .job-position > header > h2 {
+        display: flex;
+        font-size: 14px;
+        font-weight: 600;
         margin: 0;
-        float: left;
       }
 
-      .job-position > header > .time-period {
+      .job-position > header > h2 > .job-descriptor {
+        flex-grow: 1;
+      }
+
+      .job-position > header > h2 > .time-period {
         font-size: 14px;
         font-weight: 300;
-        float: right;
       }
 
       .job-position > summary > p {
@@ -103,7 +103,6 @@
 
       .job-position span.job-title {
         color: #888;
-        display: inline-block;
       }
 
       .job-position ul.job-tech {
@@ -149,7 +148,6 @@
 
       @media screen and (max-width: 550px) {
         .job-position > header > .time-period {
-          float: none;
           display: block;
           font-weight: 400;
           color: #444;
@@ -157,7 +155,7 @@
         }
 
         .job-position > header > h2 {
-          float: none;
+          flex-direction: column;
         }
 
         .job-position ul.job-tech {
@@ -227,13 +225,14 @@
           <header>
             <!-- 2/?/2018 - present -->
             <h2>
-              <a href="https://www.khanacademy.org">Shmeppy</a>
-              <span class="job-title">Lead Software Engineer & Founder</span>
+              <div class="job-descriptor">
+                <a href="https://www.khanacademy.org">Shmeppy</a>
+                <span class="job-title">Lead Software Engineer & Founder</span>
+              </div>
+              <div class="time-period">
+                <time>2018</time> – <time>Present</time>
+              </div>
             </h2>
-            <span class="time-period"
-              ><time>2018</time> – <time>Present</time></span
-            >
-            <div style="clear: both"></div>
             <ul class="job-tech">
               <li>TypeScript</li>
               <li>React.js</li>
@@ -274,15 +273,18 @@
         <article class="job-position">
           <header>
             <h2>
-              <a href="https://www.youtube.com/c/PrimerLearning"
-                >Primer Learning</a
-              >
-              <span class="job-title">Staff Software Engineer (Contract)</span>
+              <div class="job-descriptor">
+                <a href="https://www.youtube.com/c/PrimerLearning"
+                  >Primer Learning</a
+                >
+                <span class="job-title"
+                  >Staff Software Engineer (Contract)</span
+                >
+              </div>
+              <div class="time-period">
+                <time>2022</time> – <time>2023</time>
+              </div>
             </h2>
-            <span class="time-period"
-              ><time>2022</time> – <time>2023</time></span
-            >
-            <div style="clear: both"></div>
             <ul class="job-tech">
               <li>C#</li>
               <li>Unity</li>
@@ -309,13 +311,14 @@
           <header>
             <!-- 6/20/2014 - 2/?/2018. Don't know when the promotion was, don't have company emails anymore. -->
             <h2>
-              <a href="https://www.khanacademy.org">Khan Academy</a>
-              <span class="job-title">Senior Software Engineer</span>
+              <div class="job-descriptor">
+                <a href="https://www.khanacademy.org">Khan Academy</a>
+                <span class="job-title">Senior Software Engineer</span>
+              </div>
+              <div class="time-period">
+                <time>2016</time> – <time>2018</time>
+              </div>
             </h2>
-            <span class="time-period"
-              ><time>2016</time> – <time>2018</time></span
-            >
-            <div style="clear: both"></div>
             <ul class="job-tech">
               <li>JavaScript</li>
               <li>React.js</li>
@@ -350,13 +353,14 @@
           <header>
             <!-- 6/20/2014 - 2/?/2018. Don't know when the promotion was, don't have company emails anymore. -->
             <h2>
-              <a href="https://www.khanacademy.org">Khan Academy</a>
-              <span class="job-title">Software Engineer</span>
+              <div class="job-descriptor">
+                <a href="https://www.khanacademy.org">Khan Academy</a>
+                <span class="job-title">Software Engineer</span>
+              </div>
+              <div class="time-period">
+                <time>2014</time> – <time>2016</time>
+              </div>
             </h2>
-            <span class="time-period"
-              ><time>2014</time> – <time>2016</time></span
-            >
-            <div style="clear: both"></div>
             <ul class="job-tech">
               <li>JavaScript</li>
               <li>React.js</li>
@@ -392,11 +396,12 @@
           <header>
             <!-- from offer letter: 6/30/2014 - 9/19/2014 -->
             <h2>
-              <a href="https://www.mozilla.org">Mozilla</a>
-              <span class="job-title">Software Engineer Intern</span>
+              <div class="job-descriptor">
+                <a href="https://www.mozilla.org">Mozilla</a>
+                <span class="job-title">Software Engineer Intern</span>
+              </div>
+              <div class="time-period"><time>2014</time></div>
             </h2>
-            <span class="time-period"><time>2014</time></span>
-            <div style="clear: both"></div>
             <ul class="job-tech">
               <li>C++</li>
               <li>Networking</li>
@@ -413,12 +418,13 @@
         <article class="job-position">
           <header>
             <h2>
-              <a href="https://www.khanacademy.org">Khan Academy</a>
-              <span class="job-title">Software Engineer Intern</span>
+              <div class="job-descriptor">
+                <a href="https://www.khanacademy.org">Khan Academy</a>
+                <span class="job-title">Software Engineer Intern</span>
+              </div>
+              <!-- From offer letter: June 13, 2013 to Sept 14, 2013 -->
+              <div class="time-period"><time>2013</time></div>
             </h2>
-            <!-- From offer letter: June 13, 2013 to Sept 14, 2013 -->
-            <span class="time-period"><time>2013</time></span>
-            <div style="clear: both"></div>
             <ul class="job-tech">
               <li>Python</li>
               <li>AWS</li>
@@ -438,11 +444,12 @@
           <header>
             <!-- From offer letters: 6/25/2012 - 9/20/2012, 6/24/2013 - 11/20/2013 -->
             <h2>
-              <a href="http://www.jetheaddev.com">JetHead Development</a>
-              <span class="job-title">Software Engineer Intern</span>
+              <div class="job-descriptor">
+                <a href="http://www.jetheaddev.com">JetHead Development</a>
+                <span class="job-title">Software Engineer Intern</span>
+              </div>
+              <div class="time-period"><time>2012 and 2013</time></div>
             </h2>
-            <span class="time-period"><time>2012 and 2013</time></span>
-            <div style="clear: both"></div>
             <ul class="job-tech">
               <li>C++</li>
             </ul>
@@ -458,21 +465,25 @@
           <header>
             <!-- From emails: 3/16/11 - 4/26/2013 (promotion) - 03/01/2014 (leave riverside) -->
             <h2>
-              <a href="http://www.ucr.edu">UC Riverside</a>
-              <span class="job-title">Supplemental Instructor Supervisor</span>
+              <div class="job-descriptor">
+                <a href="http://www.ucr.edu">UC Riverside</a>
+                <span class="job-title"
+                  >Supplemental Instructor Supervisor</span
+                >
+              </div>
+              <div class="time-period">
+                <time>2013</time> – <time>2014</time>
+              </div>
             </h2>
-            <span class="time-period"
-              ><time>2013</time> – <time>2014</time></span
-            >
-            <div style="clear: both"></div>
             <h2>
-              <a href="http://www.ucr.edu">UC Riverside</a>
-              <span class="job-title">Supplemental Instructor</span>
+              <div class="job-descriptor">
+                <a href="http://www.ucr.edu">UC Riverside</a>
+                <span class="job-title">Supplemental Instructor</span>
+              </div>
+              <div class="time-period">
+                <time>2011</time> – <time>2013</time>
+              </div>
             </h2>
-            <span class="time-period"
-              ><time>2011</time> – <time>2013</time></span
-            >
-            <div style="clear: both"></div>
             <ul class="job-tech">
               <li>C++</li>
               <li>Python</li>
@@ -487,15 +498,18 @@
         </article>
         <article class="job-position">
           <header>
-            <h2>
-              <a href="https://github.com/galah-group/galah">Galah Group LLC</a>
-              <span class="job-title">Cofounder</span>
-            </h2>
             <!-- May 2012 to Nov 2014 -->
-            <span class="time-period"
-              ><time>2012</time> – <time>2014</time></span
-            >
-            <div style="clear: both"></div>
+            <h2>
+              <div class="job-descriptor">
+                <a href="https://github.com/galah-group/galah"
+                  >Galah Group LLC</a
+                >
+                <span class="job-title">Cofounder</span>
+              </div>
+              <div class="time-period">
+                <time>2012</time> – <time>2014</time>
+              </div>
+            </h2>
             <ul class="job-tech">
               <li>Python</li>
               <li>Flask</li>
@@ -514,13 +528,14 @@
         <article class="job-position">
           <header>
             <h2>
-              Various Companies
-              <span class="job-title">Software Engineer (Contract)</span>
+              <div class="job-descriptor">
+                <span>Various Companies</span>
+                <span class="job-title">Software Engineer (Contract)</span>
+              </div>
+              <div class="time-period">
+                <time>2007</time> – <time>2013</time>
+              </div>
             </h2>
-            <span class="time-period"
-              ><time>2007</time> – <time>2013</time></span
-            >
-            <div style="clear: both"></div>
             <ul class="job-tech">
               <li>Python</li>
               <li>C#</li>
@@ -559,11 +574,15 @@
         <article class="job-position">
           <header>
             <!-- From emails: 3/16/11 - 4/26/2013 (promotion) - 03/01/2014 (leave riverside) -->
-            <h2>Education <a href="http://www.ucr.edu">UC Riverside</a></h2>
-            <span class="time-period"
-              ><time>2010</time> – <time>2013</time></span
-            >
-            <div style="clear: both"></div>
+            <h2>
+              <div class="job-descriptor">
+                <span>Education</span>
+                <a href="http://www.ucr.edu">UC Riverside</a>
+              </div>
+              <div class="time-period">
+                <time>2010</time> – <time>2013</time>
+              </div>
+            </h2>
           </header>
           <summary>
             <p>
