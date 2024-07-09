@@ -22,16 +22,18 @@ SCRIPT_DIR="$(
     pwd -P
 )"
 
+mapfile -d "" -t BASH_FILES < <(
+    find "$SCRIPT_DIR" "$SCRIPT_DIR/../git-hooks" -type f -print0
+)
+
 if [[ $DRY_RUN == true ]]; then
     set -x
-    find "$SCRIPT_DIR" -type f -name '*.sh' -exec shfmt -i=4 -sr -l {} +
+    shfmt -i=4 -sr -l "${BASH_FILES[@]}"
     npx prettier@3.3.2 --check "$SCRIPT_DIR/../index.htm"
 else
     set -x
-    find "$SCRIPT_DIR" -type f -name '*.sh' -exec shfmt -i=4 -sr -w {} +
+    shfmt -i=4 -sr -w "${BASH_FILES[@]}"
     npx prettier@3.3.2 --write "$SCRIPT_DIR/../index.htm"
 fi
 
-find "$SCRIPT_DIR" -type f -name '*.sh' -exec shellcheck --shell=bash -x {} +
-
-echo "Done."
+shellcheck --shell=bash -x "${BASH_FILES[@]}"
