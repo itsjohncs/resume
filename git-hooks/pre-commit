@@ -13,3 +13,10 @@ if ! "$SCRIPT_DIR/../scripts/lint-and-prettify.sh" --dry-run; then
 else
     echo "SUCCESS: Lint passed."
 fi
+
+if ! "$SCRIPT_DIR/../scripts/create-pdf.sh" --check; then
+    echo "ERROR: PDF is not up to date. Run scripts/create-pdf.sh to fix." >&2
+    exit 1
+else
+    echo "SUCCESS: PDF up-to-date."
+fi
