@@ -20,3 +20,9 @@ if ! "$SCRIPT_DIR/../scripts/create-pdf.sh" --check; then
 else
     echo "SUCCESS: PDF up-to-date."
 fi
+
+if ! "$SCRIPT_DIR/../scripts/wording-check.sh"; then
+    exit 1
+else
+    echo "SUCCESS: Wording check passed."
+fi
