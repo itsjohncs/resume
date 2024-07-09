@@ -2,16 +2,16 @@
 
 set -ueo pipefail
 
-DRY_RUN=false
+CHECK=false
 
 while [[ $# -gt 0 ]]; do
     case $1 in
-    --dry-run)
-        DRY_RUN=true
+    --check)
+        CHECK=true
         shift
         ;;
     *)
-        echo "USAGE: $0 [--dry-run]" >&2
+        echo "USAGE: $0 [--check]" >&2
         exit 1
         ;;
     esac
@@ -27,7 +27,7 @@ mapfile -d "" -t BASH_FILES < <(
     find "$SCRIPT_DIR/../git-hooks" -type f -print0
 )
 
-if [[ $DRY_RUN == true ]]; then
+if [[ $CHECK == true ]]; then
     set -x
     shfmt -i=4 -sr -l "${BASH_FILES[@]}"
     npx prettier@3.3.2 --check "$SCRIPT_DIR/../index.htm"

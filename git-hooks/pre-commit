@@ -7,7 +7,7 @@ SCRIPT_DIR="$(
     pwd -P
 )"
 
-if ! "$SCRIPT_DIR/../scripts/lint-and-prettify.sh" --dry-run; then
+if ! "$SCRIPT_DIR/../scripts/lint-and-prettify.sh" --check; then
     echo "ERROR: Lint failure." >&2
     exit 1
 else
