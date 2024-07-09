@@ -26,6 +26,7 @@ TEMP_PDF="$(mktemp /tmp/resume.XXXXXX.pdf)"
 
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
     --headless --disable-gpu --print-to-pdf="$TEMP_PDF" \
+    --virtual-time-budget=60000 \
     --no-pdf-header-footer "$SCRIPT_DIR/../index.htm"
 
 if [[ $CHECK == true ]]; then
