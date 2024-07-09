@@ -34,11 +34,9 @@ INDENT_LEVEL=$(echo "$HTML_CONTENT" | sed '/^$/d' | head -n 1 | awk '{print matc
 ADJUSTED_HTML_CONTENT=$(echo "$HTML_CONTENT" | sed -r "s/^ {0,$INDENT_LEVEL}//")
 
 if [[ $BROAD == "true" ]]; then
-    MODEL="gpt-4o"
     PROMPT_FILE="$SCRIPT_DIR/openai/broad-prompt.md"
     TEMPERATURE=1
 else
-    MODEL="gpt-3.5-turbo"
     PROMPT_FILE="$SCRIPT_DIR/openai/spellcheck-prompt.md"
     TEMPERATURE=0
 fi
@@ -48,12 +46,11 @@ PROMPT=$(cat < "$PROMPT_FILE")
 source "$SCRIPT_DIR/openai/secrets.env"
 
 OPEN_AI_REQUEST_BODY=$(jq -n \
-    --arg model "$MODEL" \
     --argjson temperature "$TEMPERATURE" \
     --arg prompt "$PROMPT" \
     --arg html "$ADJUSTED_HTML_CONTENT" \
     '{
-      "model": $model,
+      "model": "gpt-4o",
       "messages": [{"role": "user", "content": [
         {"type": "text", "text": $prompt},
         {"type": "text", "text": $html}
