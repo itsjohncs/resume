@@ -1,10 +1,1 @@
-# Vim files
-*~
-
-# OpenOffice Locks
-.~lock*#
-
-# PDF Files: we just want the ODT file(s)
-*.pdf
-
 secrets.env
