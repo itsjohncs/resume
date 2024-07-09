@@ -23,7 +23,8 @@ SCRIPT_DIR="$(
 )"
 
 mapfile -d "" -t BASH_FILES < <(
-    find "$SCRIPT_DIR" "$SCRIPT_DIR/../git-hooks" -type f -print0
+    find "$SCRIPT_DIR" -type f -name "*.sh" -print0
+    find "$SCRIPT_DIR/../git-hooks" -type f -print0
 )
 
 if [[ $DRY_RUN == true ]]; then

@@ -2,11 +2,20 @@
 
 set -ueo pipefail
 
-# Check if the correct number of arguments are passed
-if [ "$#" -ne 0 ]; then
-    echo "Usage: $0"
-    exit 1
-fi
+BROAD=false
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+    --broad)
+        BROAD=true
+        shift
+        ;;
+    *)
+        echo "USAGE: $0 [--broad]" >&2
+        exit 1
+        ;;
+    esac
+done
 
 SCRIPT_DIR="$(
     cd "$(dirname "${BASH_SOURCE[0]}")"
@@ -24,45 +33,32 @@ INDENT_LEVEL=$(echo "$HTML_CONTENT" | sed '/^$/d' | head -n 1 | awk '{print matc
 # Unindent
 ADJUSTED_HTML_CONTENT=$(echo "$HTML_CONTENT" | sed -r "s/^ {0,$INDENT_LEVEL}//")
 
-PROMPT="I'm a Software Engineer looking for a new full-stack software \
-engineering role. I've written my resume as an HTML webpage. Please flag any \
-spelling and grammar errors. You may also flag very egregious wording problems \
-but I have other checks in place to handle general flow, so focus on spelling \
-and grammar.
+if [[ $BROAD == "true" ]]; then
+    MODEL="gpt-4o"
+    PROMPT_FILE="$SCRIPT_DIR/openai/broad-prompt.md"
+    TEMPERATURE=1
+else
+    MODEL="gpt-3.5-turbo"
+    PROMPT_FILE="$SCRIPT_DIR/openai/spellcheck-prompt.md"
+    TEMPERATURE=0
+fi
+PROMPT=$(cat < "$PROMPT_FILE")
 
-To flag a problem, print out where it is, the line, and use text to point out \
-the problematic area. Then describe what needs to change. For example:
-
-\`\`\`
-Under the job Shmeppy:
-    Founded the modstly successful SaaS product
-                ^^^^^^^
-    Spelling Error: Should be spelled \"modestly\".
-\`\`\`
-
-If you do not find any problems, print only:
-
-\`\`\`
-No errors found.
-\`\`\`
-
-Everything that follows is the resume's HTML:
-
-"
-
-# shellcheck source=SCRIPTDIR/../secrets.env
-source "$SCRIPT_DIR/../secrets.env"
+# shellcheck source=SCRIPTDIR/openai/secrets.env
+source "$SCRIPT_DIR/openai/secrets.env"
 
 OPEN_AI_REQUEST_BODY=$(jq -n \
+    --arg model "$MODEL" \
+    --argjson temperature "$TEMPERATURE" \
     --arg prompt "$PROMPT" \
     --arg html "$ADJUSTED_HTML_CONTENT" \
     '{
-      "model": "gpt-3.5-turbo",
+      "model": $model,
       "messages": [{"role": "user", "content": [
         {"type": "text", "text": $prompt},
         {"type": "text", "text": $html}
       ]}],
-      "temperature": 0
+      "temperature": $temperature
     }')
 
 echo "Sending request to ChatGPT."
@@ -79,7 +75,9 @@ if [[ $FINISH_REASON != "stop" ]]; then
 fi
 
 RESPONSE_CONTENT=$(jq --raw-output .choices[0].message.content <<< "$RESPONSE")
-if [[ $RESPONSE_CONTENT != "No errors found." ]]; then
+if [[ $BROAD == "true" ]]; then
+    echo "$RESPONSE_CONTENT"
+elif [[ $RESPONSE_CONTENT != "No errors found." ]]; then
     echo "$RESPONSE_CONTENT" >&2
     exit 1
 fi
