@@ -100,6 +100,10 @@
         color: #888;
       }
 
+      .job-position span.job-title::before {
+        content: "– ";
+      }
+
       .job-position ul.job-tech {
         clear: both;
         font-size: 12px;
@@ -254,10 +258,11 @@
                 team to two members.
               </li>
               <li>
-                Built a robust subscription system using
+                Built a subscription system using
                 <a href="https://stripe.com/payments/elements"
                   >Stripe Elements</a
-                >.
+                >
+                supporting 800 active subscribers.
               </li>
               <li>
                 Set up automated backups in
