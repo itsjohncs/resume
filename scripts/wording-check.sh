@@ -51,10 +51,10 @@ OPEN_AI_REQUEST_BODY=$(jq -n \
     --arg html "$ADJUSTED_HTML_CONTENT" \
     '{
       "model": "gpt-4o",
-      "messages": [{"role": "user", "content": [
-        {"type": "text", "text": $prompt},
-        {"type": "text", "text": $html}
-      ]}],
+      "messages": [
+        {"role": "system", "content": $prompt},
+        {"role": "user", "content": $html}
+      ],
       "temperature": $temperature
     }')
 
@@ -62,7 +62,8 @@ echo "Sending request to ChatGPT."
 RESPONSE=$(curl https://api.openai.com/v1/chat/completions \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer $OPEN_AI_RESUME_PROJECT_KEY" \
-    -d "$OPEN_AI_REQUEST_BODY")
+    -d "$OPEN_AI_REQUEST_BODY" \
+    --no-progress-meter)
 
 FINISH_REASON=$(jq --raw-output .choices[0].finish_reason <<< "$RESPONSE")
 if [[ $FINISH_REASON != "stop" ]]; then
@@ -73,7 +74,7 @@ fi
 
 RESPONSE_CONTENT=$(jq --raw-output .choices[0].message.content <<< "$RESPONSE")
 if [[ $BROAD == "true" ]]; then
-    echo "$RESPONSE_CONTENT"
+    glow <<< "$RESPONSE_CONTENT"
 elif [[ $RESPONSE_CONTENT != "No errors found." ]]; then
     echo "$RESPONSE_CONTENT" >&2
     exit 1
