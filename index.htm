@@ -93,7 +93,7 @@
 
       .job-position > header > h2 > .time-period {
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
       }
 
       .job-position span.job-title {
@@ -104,25 +104,8 @@
         content: "– ";
       }
 
-      .job-position ul.job-tech {
-        clear: both;
-        font-size: 12px;
-        padding: 0;
-        display: block;
-        text-align: left;
-        margin: 0;
-      }
-
       .job-position ul {
         margin: 0;
-      }
-
-      .job-position ul.job-tech > li {
-        display: inline-block;
-
-        padding: 0px 5px;
-        background: #f1f1f1;
-        margin-top: 3px;
       }
 
       .job-position > summary > ul {
@@ -148,17 +131,12 @@
       @media screen and (max-width: 550px) {
         .job-position > header > .time-period {
           display: block;
-          font-weight: 400;
           color: #444;
           font-size: 12px;
         }
 
         .job-position > header > h2 {
           flex-direction: column;
-        }
-
-        .job-position ul.job-tech {
-          margin-top: 5px;
         }
 
         body {
@@ -172,7 +150,8 @@
 
       @media print {
         body {
-          margin: 0 1in;
+          font-size: 10pt;
+          margin: 0 0.75in;
           print-color-adjust: exact;
           -webkit-print-color-adjust: exact;
         }
@@ -194,12 +173,17 @@
           text-decoration: none;
         }
 
+        #heading {
+          margin-bottom: 20px;
+        }
+
         .job-position {
           break-inside: avoid;
+          margin-bottom: 20px;
         }
 
         .job-position span.job-title {
-          color: #555;
+          color: inherit;
         }
 
         .no-breaking {
@@ -275,25 +259,6 @@
         </article>
         <article class="job-position">
           <header>
-            <h2>
-              <div class="job-descriptor">
-                <a href="https://www.youtube.com/c/PrimerLearning"
-                  >Primer Learning</a
-                >
-                <span class="job-title"
-                  >Principal Software Engineer (Part-Time Contract)</span
-                >
-              </div>
-              <div class="time-period">2022 – 2023</div>
-            </h2>
-          </header>
-          <summary>
-            Built Unity simulations and editor extensions for their YouTube
-            channel with 1.7M subscribers.
-          </summary>
-        </article>
-        <article class="job-position">
-          <header>
             <!-- 6/20/2014 - 2/?/2018. Don't know when the promotion was, don't have company emails anymore. -->
             <h2>
               <div class="job-descriptor">
@@ -363,9 +328,57 @@
         </article>
         <article class="job-position">
           <header>
+            <!-- from offer letter: 6/30/2014 - 9/19/2014 -->
             <h2>
               <div class="job-descriptor">
-                <span>Various Companies</span>
+                <a href="https://www.mozilla.org">Mozilla</a>
+                <span class="job-title">Software Engineer Intern</span>
+              </div>
+              <div class="time-period">2014</div>
+            </h2>
+          </header>
+          <summary>
+            Decreased DNS lookup latency on all Mozilla products by leveraging
+            OS caches (using C++).
+          </summary>
+        </article>
+        <article class="job-position">
+          <header>
+            <h2>
+              <div class="job-descriptor">
+                <a href="https://www.khanacademy.org">Khan Academy</a>
+                <span class="job-title">Software Engineer Intern</span>
+              </div>
+              <!-- From offer letter: June 13, 2013 to Sept 14, 2013 -->
+              <div class="time-period">2013</div>
+            </h2>
+          </header>
+          <summary>
+            Rebuilt their search engine reducing indexing latency from days to
+            minutes and improving engagement.
+          </summary>
+        </article>
+        <article class="job-position">
+          <header>
+            <!-- From offer letters: 6/25/2012 - 9/20/2012, 6/24/2013 - 11/20/2013 -->
+            <h2>
+              <div class="job-descriptor">
+                <a href="http://www.jetheaddev.com">JetHead Development</a>
+                <span class="job-title">Software Engineer Intern</span>
+              </div>
+              <div class="time-period">2012 and 2013</div>
+            </h2>
+          </header>
+          <summary>
+            Rebuilt the entirety of their closed captioning systems, drastically
+            improving their products' reliability.
+          </summary>
+        </article>
+        <article class="job-position">
+          <header>
+            <h2>
+              <div class="job-descriptor">
+                <span>John CS Development</span>
                 <span class="job-title"
                   >Software Engineer (Part-Time Contracts)</span
                 >
@@ -374,10 +387,10 @@
             </h2>
           </header>
           <summary>
-            Completed 20+ contracts including
+            Completed over 20 contracts including building
             <a href="https://www.color-track.com">ColorTrack Realtime</a>'s
-            desktop interface with C# and WPF, a CMS for a senior community home
-            broker, and a ribbon toolbar with RTL language support.
+            desktop interface and a CMS for a senior community home broker with
+            C# and WPF, and a ribbon toolbar with RTL language support with VB6.
           </summary>
         </article>
         <article class="job-position">
@@ -390,11 +403,6 @@
           </header>
           <summary>
             <ul>
-              <li>
-                Interned at <a href="https://www.mozilla.org">Mozilla</a>,
-                <a href="http://www.jetheaddev.com">JetHead Development</a>, and
-                <a href="https://www.khanacademy.org">Khan Academy</a>.
-              </li>
               <li>
                 Taught C++ and Python as a Supplemental Instructor at the
                 <a href="http://www.ucr.edu"
